@@ -8,3 +8,8 @@ Settimana 1 e 2:
 - Stescaro backend
 - Fgori frontend ed estetica
 - Sfabi frontend e Arduino
+
+
+-------------frontend-------------
+-
+-Nebular -> libreria che ha grafiche e moduli per autenticazione
