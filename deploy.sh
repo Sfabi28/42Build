@@ -37,6 +37,8 @@ git reset --hard
 git clean -fd
 git checkout main
 
+echo ""
 echo "✅ Deployment complete!"
+echo ""
 echo "🌐 Your site will be available at: https://sfabi28.github.io/42Build/"
 echo "📝 Note: GitHub Pages may take a few minutes to update"
