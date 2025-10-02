@@ -1,9 +1,11 @@
 <div class="sidebar">
-    <li>
-        <ul>Home</ul>
-        <ul>Device</ul>
-        <ul (click)="onclick()">Profile</ul>
-        <ul>Shop</ul>
-        <ul>Settings</ul>
-    </li>
+    <ul class="list">
+        <li (click)="onclick('home')">Home</li>
+        <li (click)="onclick('device')">Device</li>
+        <li (click)="onclick('plants')">Plants</li>
+        <li (click)="onclick('profile')">Profile</li>
+        <li (click)="onclick('shop')">Shop</li>
+        <li (click)="onclick('settings')">Settings</li>
+    </ul>
+    <img class="logo" src="def.png" alt="logo" />
 </div>

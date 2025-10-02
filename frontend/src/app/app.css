@@ -1,8 +1,15 @@
-:host ,body{
-    display: block;
+:host .background{
     margin: 0;
     padding: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     background: linear-gradient(to bottom, green, lightgreen);
+}
+
+@media (max-width: 300px) {
+    :host .background{
+        flex-direction: row;
+    }
 }

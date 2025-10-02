@@ -1,7 +1,58 @@
-.sidebar {
-    height: 100vh;
-    width: 200px;
+ .sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+}
+
+.list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.list li{
+    cursor: pointer;
+    user-select: none;
+    transition: color .2s;
+}
+
+.list li:hover { color: #8fd48f; }
+
+.logo{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start; 
+        gap: 8px;
+        height: 100%;
+    }
+    .logo {
+        order: 0;
+        margin-bottom: 8px;
+    }
+    .list {
+        order: 1;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
 }
