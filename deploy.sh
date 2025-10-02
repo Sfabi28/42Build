@@ -33,6 +33,7 @@ git push origin gh-pages --force
 
 # Clean up and return to main
 echo "🧹 Cleaning up..."
+git reset --hard
 git clean -fd
 git checkout main
 
