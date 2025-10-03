@@ -12,4 +12,6 @@ export class User {
     posts?: number[];
     followers?: number[];
     following?: number[];
+    address?: string;
+    city?: string
 }

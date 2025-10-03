@@ -11,4 +11,5 @@ export class Device {
     nutrient_goal?: number;
     water_level?: number;
     water_goal?: number;
+    price?: string;
 }

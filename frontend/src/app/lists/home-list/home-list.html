@@ -11,6 +11,10 @@
         <span class="label">Nutrienti</span>
         <span class="value">{{ d.nutrient_level ?? '—' }}</span>
       </div>
+      <div *ngIf="shop" class="metric">
+        <span class="label">Prezzo</span>
+        <span class="value">{{ d.price ?? '—' }}</span>
+    </div>
     </div>
   </li>
 </ul>

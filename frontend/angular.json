@@ -15,16 +15,33 @@
           "options": {
             "browser": "src/main.ts",
             "outputPath": "dist/frontend",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
-            "assets": [{ "glob": "**/*", "input": "public" }],
-            "styles": ["src/styles.css"]
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
-                { "type": "initial", "maximumWarning": "500kB", "maximumError": "1MB" },
-                { "type": "anyComponentStyle", "maximumWarning": "4kB", "maximumError": "8kB" }
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
               ],
               "outputHashing": "all"
             },
@@ -32,10 +49,6 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            },
-            "gh": {
-              "baseHref": "/42Build/",
-              "deployUrl": "/42Build/"
             }
           },
           "defaultConfiguration": "production"
@@ -43,25 +56,44 @@
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
-            "production": { "buildTarget": "frontend:build:production" },
-            "development": { "buildTarget": "frontend:build:development" },
-            "gh": { "buildTarget": "frontend:build:gh" }
+            "production": {
+              "buildTarget": "frontend:build:production"
+            },
+            "development": {
+              "buildTarget": "frontend:build:development"
+            }
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": { "builder": "@angular/build:extract-i18n" },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [{ "glob": "**/*", "input": "public" }],
-            "styles": ["src/styles.css"]
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ]
           }
         },
-        "deploy": { "builder": "angular-cli-ghpages:deploy" }
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
+        }
       }
     }
   },
-  "cli": { "analytics": "08fc19e2-8102-449d-8103-cc0f2bf8343f" }
+  "cli": {
+    "analytics": "08fc19e2-8102-449d-8103-cc0f2bf8343f"
+  }
 }

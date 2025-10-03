@@ -12,6 +12,7 @@ import { Device } from '../../model/device';
 })
 export class HomeList {
   @Input() element: Device[] = [];
+  @Input() shop: boolean = false;
   
   constructor() {
   }
