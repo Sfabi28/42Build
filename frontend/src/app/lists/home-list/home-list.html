@@ -3,11 +3,11 @@
     <img class="device-icon" [src]="d.icon || 'def.png'" alt="{{ d.name }}" />
     <h4 class="device-name">{{ d.name }}</h4>
     <div class="metrics">
-      <div class="metric">
+      <div *ngIf="device_ok(d)" class="metric">
         <span class="label">pH</span>
         <span class="value" [class.warn]="d.ph_level! < 6 || d.ph_level! > 8">{{ d.ph_level ?? '—' }}</span>
       </div>
-      <div class="metric">
+      <div *ngIf="device_ok(d)" class="metric">
         <span class="label">Nutrienti</span>
         <span class="value">{{ d.nutrient_level ?? '—' }}</span>
       </div>

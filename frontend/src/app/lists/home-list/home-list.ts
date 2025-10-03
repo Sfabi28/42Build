@@ -19,4 +19,11 @@ export class HomeList {
   trackById(index: number, item: Device) {
     return item.id; // o index se non hai un id stabile
   }
+
+  device_ok(d: Device): boolean {
+    if (d.ph_level)
+        return true;
+    return false;
+  }
+
 }
