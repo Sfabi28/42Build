@@ -1,12 +1,12 @@
 <div class="sidebar">
     <div class="toggle" (click)="toggle()">&#9776; </div>
     <ul class="list">
-        <li (click)="onclick('home')">Home</li>
-        <li (click)="onclick('device')">Device</li>
-        <li (click)="onclick('plants')">Plants</li>
-        <li (click)="onclick('profile')">Profile</li>
-        <li (click)="onclick('shop')">Shop</li>
-        <li (click)="onclick('settings')">Settings</li>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/device">Device</a></li>
+        <li><a routerLink="/plants">Plants</a></li>
+        <li><a routerLink="/profile">Profile</a></li>
+        <li><a routerLink="/shop">Shop</a></li>
+        <li><a routerLink="/settings">Settings</a></li>
     </ul>
     <img class="logo" src="def.png" alt="logo" />
 </div>
