@@ -1,0 +1,149 @@
+/* Lista come griglia di card */
+.devices {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+/* Card device */
+.device {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "icon name"
+    "icon metrics";
+  grid-template-columns: 56px 1fr;
+  align-items: start;
+  gap: 6px 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e7e97e, #534f26 60%);
+  border: 1px solid #3a3a3a;
+  box-shadow: 0 4px 10px -4px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,0.04) inset;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s, border-color .25s, background .4s;
+  overflow: hidden;
+}
+
+.device::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 25%, rgba(143,212,143,0.14), transparent 60%);
+  opacity: .65;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  transition: opacity .35s;
+}
+
+.device:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px -8px rgba(0,0,0,.65);
+  border-color: #4b6b4b;
+}
+
+.device:hover::after {
+  opacity: 1;
+}
+
+.device:active {
+  transform: translateY(-1px);
+}
+
+/* Icona */
+.device-icon {
+  grid-area: icon;
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #1e1e1e;
+  border: 1px solid #3b3b3b;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.03) inset;
+}
+
+/* Nome */
+.device-name {
+  grid-area: name;
+  margin: 0;
+  font-size: .97rem;
+  font-weight: 600;
+  color: #8fd48f;
+  letter-spacing: .3px;
+}
+
+/* Sezione metriche */
+.metrics {
+  grid-area: metrics;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 2px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  min-width: 72px;
+}
+
+.metric .label {
+  font-size: .58rem;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  opacity: .55;
+}
+
+.metric .value {
+  font-size: .82rem;
+  font-weight: 500;
+  color: #e2e2e2;
+}
+
+.metric .value.warn {
+  color: #ff9966;
+}
+
+.metric .value.low {
+  color: #e86e6e;
+  font-weight: 600;
+}
+
+/* Stato lista vuota */
+p + .devices,
+.devices:empty {
+  /* nessun extra */
+}
+
+p {
+  text-align: center;
+  font-size: .85rem;
+  opacity: .55;
+  font-style: italic;
+  margin: 18px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .devices {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .device {
+    grid-template-columns: 48px 1fr;
+    padding: 12px 14px;
+  }
+  .device-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .metrics {
+    gap: 12px;
+  }
+}

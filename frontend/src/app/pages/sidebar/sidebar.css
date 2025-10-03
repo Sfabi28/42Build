@@ -4,10 +4,18 @@
     justify-content: space-between;
     gap: 24px;
     width: 100%;
-    background-color: #333;
+    background-color: #272727;
     color: white;
     padding: 12px 20px;
     box-sizing: border-box;
+    z-index: 100;
+    transition: width .25s, transform .3s;
+}
+.toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .list{
@@ -42,17 +50,35 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start; 
-        gap: 8px;
+        gap: 16px;
         height: 100%;
+        width: 120%;
+    }
+
+    .sidebar.compressed{
+        width: auto;
+        height: auto;
     }
     .logo {
         order: 0;
         margin-bottom: 8px;
+    }
+
+    .logo.compressed{
+        display: none;
     }
     .list {
         order: 1;
         flex-direction: column;
         gap: 8px;
         width: 100%;
+    }
+
+    .list.compressed {
+        display: none;
+    }
+
+    .toggle {
+        display: block;
     }
 }
