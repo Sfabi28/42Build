@@ -34,18 +34,25 @@
 }
 
 .list li a {
-    color: inherit;
-    text-decoration: none;
+    color: white !important;
+    text-decoration: none !important;
     display: block;
     width: 100%;
 }
 
 .list li a:visited {
-    color: inherit;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.list li a:link {
+    color: white !important;
+    text-decoration: none !important;
 }
 
 .list li a:hover {
-    color: #8fd48f;
+    color: #8fd48f !important;
+    text-decoration: none !important;
 }
 
 .list li:hover { color: #8fd48f; }
