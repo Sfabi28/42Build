@@ -8,7 +8,7 @@
     background: linear-gradient(to bottom, green, lightgreen);
 }
 
-@media (max-width: 300px) {
+@media (max-width: 728px) {
     :host .background{
         flex-direction: row;
     }

@@ -67,7 +67,7 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 728px) {
     .sidebar {
         flex-direction: column;
         align-items: flex-start;
